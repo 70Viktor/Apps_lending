@@ -1,5 +1,5 @@
 <template>
-    <section class="row">
+    <div class="row">
             <div class="row__body body">
                 <transition appear name="appear-from-left" style="--delay:0.0">
                     <div class="body__title">Applications for the future</div>
@@ -22,7 +22,7 @@
                 <img src="@/assets/02_Hero/second.png" alt="" class="images__second"/>
             </transition>
         </div>
-    </section>
+    </div>
 </template>
 
 <script>

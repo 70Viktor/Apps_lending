@@ -1,9 +1,12 @@
 <template>
   <router-view/>
+  <app-scroll-bar/>
 </template>
 
 <script>
+  import AppScrollBar from "@/components/UI-kit/scrollBar/AppScrollBar";
   export default {
+    components: {AppScrollBar}
   }
 </script>
 
@@ -23,6 +26,10 @@
   ul li{list-style: none;}
   img{vertical-align: top;}
   h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+    ::-webkit-scrollbar
+    {
+      display: none;
+    }
 
   .hidden-left {
     opacity: 0 !important;

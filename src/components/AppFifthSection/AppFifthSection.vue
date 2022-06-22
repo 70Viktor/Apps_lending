@@ -1,9 +1,9 @@
 <template>
-    <div class="wrap">
+    <section class="wrap">
         <div class="container">
             <fifth-section-body/>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

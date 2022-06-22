@@ -1,5 +1,5 @@
 <template>
-    <section class="row">
+    <div class="row">
         <div class="row__images images">
             <img src="@/assets/03_Sections/02_Mobile.png" alt="" class="images__first hidden-left" v-on-page/>
         </div>
@@ -13,7 +13,7 @@
             <app-btn class="dark body__btn hidden-right" v-on-page text="Read More"/>
         </div>
 
-    </section>
+    </div>
 </template>
 
 <script>

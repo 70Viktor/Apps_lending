@@ -1,5 +1,5 @@
 <template>
-    <section class="row">
+    <div class="row">
         <div class="row__body body">
             <h1 class="body__title hidden-left" v-on-page="'_active'">Make a big splash in the app world</h1>
             <div class="body__text hidden-left" v-on-page="'_active'">He scratched it tickety boo harry the cras bargy chap mush spiffing spend a penny the full monty burke butty.</div>
@@ -18,7 +18,7 @@
         <div class="row__images images">
             <img src="@/assets/03_Sections/01_Mobile.png" alt="" class="images__first hidden-right" v-on-page="'_active'"/>
         </div>
-    </section>
+    </div>
 </template>
 
 <script>

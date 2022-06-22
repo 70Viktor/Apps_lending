@@ -1,5 +1,5 @@
 <template>
-    <section class="wrap">
+    <div class="wrap">
         <div class="title hidden-bottom" v-on-page>Our Testimonial</div>
         <div class="text hidden-bottom" v-on-page>Most mobile devices are sold with several apps bundled as pre-installed software, such as a web browser</div>
         <div class="row">
@@ -16,7 +16,7 @@
                 <div class="card__subtitle">CEO-Founder</div>
             </div>
         </div>
-    </section>
+    </div>
 </template>
 
 <script>

@@ -1,0 +1,132 @@
+.wrap {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #4B95FA 0%, #CD4BFA 100%);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 90px 40px;
+  @media (max-width: 500px) {
+    padding: 20px;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  @media (max-width: 767px) {
+    flex-wrap: wrap-reverse;
+    gap: 40px;
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 320px;
+    @media (max-width: 767px) {
+      max-width: unset;
+      flex: 1 1 100%;
+    }
+    &-logo {
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+    &-text {
+      font-weight: 400;
+      font-size: 1em;
+      line-height: 160%;
+      color: #FFFFFF;
+      opacity: 0.7;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-title {
+      font-weight: 700;
+      font-size: 1.5em;
+      line-height: 140%;
+      color: #FFFFFF;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+    &-item {
+      font-weight: 600;
+      font-size: 1em;
+      line-height: 170%;
+      color: #FFFFFF;
+      opacity: 0.7;
+      cursor: pointer;
+    }
+    &-socials {
+      display: flex;
+      margin-bottom: auto;
+      gap: 15px;
+      & img {
+        width: 36px;
+        height: 36px;
+        object-fit: none;
+        border: 1px solid #F2F3F4;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.el {
+  position: absolute;
+  z-index: 0;
+  animation: animate linear infinite;
+  animation-duration: calc(50s / var(--i));
+  &-01 {
+    left: 11%;
+  }
+  &-02 {
+    left: 28%;
+  }
+  &-04 {
+    right: 35%;
+  }
+  &-06 {
+    right: -3%;
+  }
+  &-07 {
+    left: 12%;
+  }
+  &-08 {
+    left: 4%;
+  }
+  &-11 {
+    right: 30%;
+  }
+  &-12 {
+    right: 8%;
+  }
+  &-13 {
+    right: 6%;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotateZ(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50vh) rotateZ(180deg);
+    opacity: 0;
+  }
+}

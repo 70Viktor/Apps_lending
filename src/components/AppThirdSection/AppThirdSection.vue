@@ -1,5 +1,5 @@
 <template>
-    <div class="wrap">
+    <section class="wrap">
         <div class="container">
             <third-section-body/>
             <img src="@/assets/03_Sections/02_back.png" alt="" class="background">
@@ -15,7 +15,7 @@
             <img class="el el-12" style="--i:16" src="@/assets/02_Hero/12.svg" alt=""/>
             <img class="el el-13" style="--i:13" src="@/assets/02_Hero/13.svg" alt=""/>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
