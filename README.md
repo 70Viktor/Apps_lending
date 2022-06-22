@@ -1,19 +1,7 @@
 # pet_lending
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* the stack of technologies used:
+1) VueJS 3
+2) Animations
+3) Vue transition
+4) Adaptive layout
+5) Custom Vue Diretive
