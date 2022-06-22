@@ -1,0 +1,152 @@
+.row {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  @media (max-width: 992px) {
+    padding-top: 25px;
+  };
+  &_logo {
+    margin-right: auto;
+    @media (max-width: 992px) {
+      max-width: 100px;
+    };
+    @media (max-width: 768px) {
+      max-width: 75px;
+    }
+  }
+  &_navbar {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    min-width: 680px;
+    @media (max-width: 992px) {
+      min-width: 580px;
+    };
+    &__link {
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s ease-out;
+      & a {
+        font-weight: 500;
+        font-size: 1.2em;
+        line-height: 160%;
+        color: #FFFFFF;
+        opacity: 0.7;
+        @media (max-width: 992px) {
+          font-size: 1em;
+        };
+        @media (max-width: 767px) {
+          font-size: 2em;
+        };
+      }
+      &._active a {
+        opacity: 1;
+      }
+      &::before {
+        content: "";
+        width: 0%;
+        height: 1px;
+        background: #FFFFFF;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transition: 0.3s ease-out;
+      }
+      &:hover::before{
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      bottom: 0;
+      right: -100%;
+      opacity: 0;
+      width: 320px;
+      min-width: unset;
+      flex-direction: column;
+      padding: 100px 0;
+      background: #0D2843;
+      transition: 0.3s 0.25s ease-out;
+      &._active {
+        right: 0;
+        opacity: 1;
+      }
+    };
+  }
+
+  &_btns {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    @media (max-width: 768px) {
+      margin-left: unset;
+      margin-top: auto;
+    }
+  }
+}
+
+
+.burger {
+  @media (min-width: 768.5px) {
+    display: none;
+  }
+  position: absolute;
+  z-index: 1000;
+  top: 25px;
+  right: 25px;
+  width: 30px;
+  height: 18px;
+  & span,
+  &::before,
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    height: 2px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    transform-origin: center;
+  }
+  & span {
+    width: 100%;
+    top: calc(50% - 1px);
+    transition-duration: .25s;
+    transition-delay: .25s;
+  }
+  &::before {
+    width: 75%;
+    top: 0%;
+    transition-duration: .25s;
+    transition: transform .25s, width .25s .25s, top .25s .25s;
+  }
+  &::after {
+    width: 50%;
+    bottom: 0%;
+    transition-duration: .25s;
+    transition: transform .25s, width .25s 0.25s, bottom .25s .25s;
+  }
+  &._active span {
+    transition-duration: 0.1s;
+    transition-delay: .25s;
+    background: transparent;
+  }
+  &._active::before {
+    transition: top .25s, width .25s, transform .25s .25s;
+    width: 100%;
+    top: calc(50% - 1px);
+    transform: rotateZ(-45deg);
+  }
+  &._active::after {
+    transition: bottom 0.4s, width .25s, transform .25s .25s;
+    width: 100%;
+    bottom: calc(50% - 1px);
+    transform: rotateZ(45deg);
+  }
+}

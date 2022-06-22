@@ -1,0 +1,129 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  position: relative;
+}
+.title {
+  margin-top: 130px;
+  font-weight: 800;
+  font-size: 4.5em;
+  line-height: 120%;
+  color: #0D2843;
+  @media (max-width: 1200px) {
+    margin-top: 70px;
+  }
+  @media (max-width: 992px) {
+    margin-top: 40px;
+    font-size: 2.5em;
+  }
+}
+
+.text {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 160%;
+  color: #0D2843;
+  opacity: 0.6;
+  max-width: 450px;
+  text-align: center;
+  @media (max-width: 992px) {
+    margin-top: 20px;
+    font-size: 1em;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 50px;
+  max-width: 1080px;
+  margin: 130px auto;
+  @media (max-width: 1200px) {
+    margin-top: 80px;
+    gap: 40px;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    max-width: 280px;
+    gap: 70px;
+  }
+}
+
+.card {
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #FFFFFF;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border: 1px solid #4B95FA;
+  padding: 80px 40px 40px 40px;
+  @media (max-width: 1200px) {
+    max-width: 340px;
+  }
+  &__stars {
+  }
+  &__title {
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 2em;
+    line-height: 130%;
+    text-align: center;
+    color: #0D2843;
+    @media (max-width: 992px) {
+      margin-top: 20px;
+      font-size: 1.5em;
+    }
+    @media (max-width: 767px) {
+      margin-top: 15px;
+    }
+  }
+  &__text {
+    margin-top: 1em;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    color: #0D2843;
+    opacity: 0.6;
+    @media (max-width: 992px) {
+      margin-top: 15px;
+      font-size: 1em;
+    }
+  }
+  &__subtitle {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 160%;
+    text-align: center;
+    opacity: 0.5;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    width: 55px;
+    height: 109px;
+    background: url("@/assets/03_Sections/03_element.svg");
+    position: absolute;
+    top: -55px;
+  }
+
+  &::before {
+    left: calc(50% - 70px);
+  }
+  &::after {
+    right: calc(50% - 70px);
+  }
+}

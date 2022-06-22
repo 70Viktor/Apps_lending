@@ -1,0 +1,95 @@
+.wrap {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.container {
+  min-height: 100vh;
+  max-width: 1100px;
+  padding: 0 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.background {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 90%;
+  width: auto;
+  object-fit: cover;
+  z-index: 2;
+  @media (max-width: 767px) {
+    height: 60%;
+  }
+}
+
+.el {
+  position: absolute;
+  animation: animate linear infinite;
+  animation-duration: calc(50s / var(--i));
+  z-index: 3;
+  &-01 {
+    right: 40%;
+    z-index: 1;
+  }
+  &-02 {
+    right: 28%;
+    z-index: 1;
+  }
+  &-03 {
+    right: 15%;
+    z-index: 1;
+  }
+  &-04 {
+    right: 45%;
+    z-index: 1;
+  }
+  &-05 {
+    right: 12%;
+  }
+  &-06 {
+    right: 10%;
+  }
+  &-07 {
+    left: 12%;
+  }
+  &-08 {
+    left: 4%;
+  }
+  &-09 {
+    right: 20%;
+  }
+  &-10 {
+    right: 30%;
+  }
+  &-11 {
+    right: 30%;
+  }
+  &-12 {
+    right: 8%;
+  }
+  &-13 {
+    right: 6%;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(110vh) rotateZ(0deg);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(calc((30 - 2*var(--i)) * 1vh)) rotateZ(180deg);
+    opacity: 0;
+  }
+}

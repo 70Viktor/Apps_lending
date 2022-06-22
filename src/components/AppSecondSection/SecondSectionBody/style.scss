@@ -1,0 +1,138 @@
+.row {
+  margin: auto;
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  @media (max-width: 1200px) {
+    padding: 40px 0;
+    max-width: 940px;
+  }
+  @media (max-width: 992px) {
+    padding: 30px 0;
+    max-width: 700px;
+  }
+  @media (max-width: 767px) {
+    padding: 25px 0;
+    max-width: 500px;
+  }
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.body {
+  max-width: 460px;
+  z-index: 4;
+  @media (max-width: 767px) {
+    max-width: 390px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 3.5em;
+    line-height: 130%;
+    color: #0D2843;
+    @media (max-width: 1200px) {
+      font-size: 2.5em;
+    }
+    @media (max-width: 992px) {
+      font-size: 1.8em;
+    };
+  }
+  &__text {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 160%;
+    color: #0D2843;
+    opacity: 0.6;
+    @media (max-width: 1200px) {
+      margin-top: 20px;
+    }
+    @media (max-width: 992px) {
+      margin-top: 10px;
+    }
+  }
+  &__list {
+    margin-top: 40px;
+    @media (max-width: 1200px) {
+      margin-top: 20px;
+    }
+    @media (max-width: 992px) {
+      margin-top: 15px;
+    }
+
+    &_item {
+      position: relative;
+      padding-left: 5em;
+      margin-bottom: 40px;
+      @media (max-width: 767px) {
+        padding-left: 3em;
+        margin-bottom: 15px;
+      }
+    }
+
+    &_title span {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2em;
+      height: 2em;
+      border-radius: 50%;
+      line-height: 2em;
+      text-align: center;
+      background: #0D2843;
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 1em;
+
+      @media (max-width: 767px) {
+        width: 1.5em;
+        height: 1.5em;
+        font-size: 1em;
+        line-height: 1.5em;
+      }
+    }
+
+    &_title {
+      font-weight: 600;
+      font-size: 2em;
+      line-height: 2em;
+      @media (max-width: 767px) {
+        font-size: 1.5em;
+        line-height: 1.5em;
+      }
+    }
+
+    &_text {
+      margin-top: 20px;
+      font-size: 1em;
+      line-height: 160%;
+      opacity: 0.6;
+      @media (max-width: 767px) {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.images {
+  position: relative;
+  flex: 1 0 auto;
+  text-align: center;
+  &__first {
+    position: relative;
+    z-index: 4;
+    @media (max-width: 992px) {
+      max-height: 380px;
+    }
+    @media (max-width: 768px) {
+      max-height: 320px;
+    }
+  }
+}
