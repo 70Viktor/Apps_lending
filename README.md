@@ -1,4 +1,4 @@
-# pet_lending
+# https://70viktor.github.io/Apps_lending
 * the stack of technologies used:
 1) VueJS 3
 2) Animations
