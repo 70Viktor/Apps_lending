@@ -1,6 +1,6 @@
 <template>
     <section class="wrap">
-        <div class="title hidden-bottom" v-on-page>How tu use</div>
+        <h2 class="title hidden-bottom" v-on-page>How to use</h2>
         <div class="text hidden-bottom" v-on-page>Apps were originally intended for productivity assistance such as email, calendar, and contact databases</div>
         <div class="row">
             <div class="row__card card hidden-left" style="--delay:0.0" v-on-page>

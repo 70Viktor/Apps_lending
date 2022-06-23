@@ -18,7 +18,6 @@
         },
         mounted() {
             window.onscroll = () => {
-                console.log('scroll')
                 this.progressHeight = window.pageYOffset / (document.body.scrollHeight - window.innerHeight) * 100
             }
         }
